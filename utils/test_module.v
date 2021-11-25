@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 module TestModule (
+    input clock,
     input single_input,
     input [2:0] array_input,
     output single_output,
