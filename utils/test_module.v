@@ -1,17 +1,25 @@
 `timescale 1ns / 1ps
-
-module TestModule (
+// single line comment test
+/* multiple line
+comment test
+*/
+module TestModule #(parameter N = 10 )(
     input clock,
-    input single_input,
-    input [2:0] array_input,
+    input single_input, // single line comment inside module
+    input/* multiple line comment inside module */[2:0] array_input,
     output single_output,
-    output [2:0] array_output,
+    output [N-1:0] array_output,
     output reg single_reg_output,
-    output reg [2:0] reg_array_output,
+    output reg [N-1:0] reg_array_output,
     inout single_inout,
-    inout [2:0] array_inout,
-    port_not_declared
+    inout [N-1:0] array_inout
 );
-    input port_not_declared;
+    
+
+endmodule
+
+module SecondTestModule (
+    input clock
+);
 
 endmodule
